@@ -10,36 +10,99 @@ function getUserInput() {
             {
                 type: "input",
                 name: "name",
-                message: "What is your name?"
+                message: "Your name:"
             },
             {
                 type: "input",
-                name: "location",
-                message: "What city do you live in?"
+                name: "githubUsername",
+                message: "Your GitHub username:"
             },
             {
                 type: "input",
-                name: "bio",
-                message: "Enter a brief bio:"
+                name: "githubURL",
+                message: "Your GitHub profile url:"
             },
             {
                 type: "input",
-                name: "linkedin",
-                message: "What is your LinkedIn profile url?"
+                name: "email",
+                message: "Your email address:"
             },
             {
                 type: "input",
-                name: "github",
-                message: "What is your GitHub profile url?"
+                name: "title",
+                message: "Project title:"
+            },
+            {
+                type: "input",
+                name: "description",
+                message: "Project description:"
+            },
+            {
+                type: "input",
+                name: "installation",
+                message: "Project installation information:"
+            },
+            {
+                type: "input",
+                name: "usage",
+                message: "Project usage information:"
+            },
+            {
+                type: "input",
+                name: "license",
+                message: "Project license information:"
+            },
+            {
+                type: "input",
+                name: "contributing",
+                message: "Information about contributing to this project:"
+            },
+            {
+                type: "input",
+                name: "tests",
+                message: "Information about testing for this project:"
             }
         ]);
 } 
 
 // function to create README file content
 function createREADMEcontent(responses) {
-    return `
-    
-    `
+    return
+`# ${responses.title}
+
+## Description: 
+${responses.description}
+
+## Table of Contents
+    * Installation
+    * Usage
+    * License
+    * Contributing
+    * Tests
+    * Questions
+
+## Installation
+${responses.installation}
+
+## Usage
+${responses.usage}
+
+## License
+${responses.license}
+
+## Contributing
+${responses.contributing}
+
+## Tests
+${responses.tests}
+
+## Questions
+Please contact me with questions about this project.
+Name: ${responses.name}
+GitHub: ${responses.githubUsername}
+        ${responses.githubURL}
+Email: ${responses.email}
+`
 }
 
 // function to initialize program
