@@ -97,7 +97,7 @@ function createREADMEcontent(responses) {
     return `# ${responses.title}
 ${licenseBadges[responses.license]}
 
-## Description: 
+## Description 
 ${responses.description}
 
 ## Table of Contents
